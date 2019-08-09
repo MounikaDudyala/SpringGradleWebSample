@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+sourceCompatibility = 1.8
+apply plugin: "war"
+war {
+    baseName = 'SpringGradleWebSample'
+    version = '1.0.0-BUILD-SNAPSHOT'
+}
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+   compile "org.springframework:spring-web:4.3.9.RELEASE"
+   compile ("org.springframework:spring-webmvc:4.3.9.RELEASE")
+   compile("javax.servlet:jstl:1.2")
+   providedRuntime("javax.servlet.jsp:jsp-api:2.1")	
+   providedRuntime("javax.servlet:servlet-api:2.5")
+   testImplementation ("junit:junit:4.12")
+
+}
